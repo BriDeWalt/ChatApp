@@ -1,0 +1,14 @@
+<ChatScreen>:
+    orientation: 'vertical'
+    Label:
+        text_size: self.size
+        halign: 'left'
+        valign: 'top'
+        id: label1
+        text: root.widget_text
+    TextInput:
+        id: MessageBox
+        multiline: False
+        size_hint: (1, None)
+        height: dp(30)
+        on_text_validate: app.send_message()
